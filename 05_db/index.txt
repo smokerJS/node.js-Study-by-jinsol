@@ -1,0 +1,9 @@
+test01 - 데이터베이스 연결하기 , DB생성
+test02 - 테이블 생성
+test03 - insert
+test04 - delete
+test05 - select
+test06 - 조건값 동적대입
+test07 - insert 에 대한 selectKey
+
+exam - test07 까지 진행 후 접근하기
