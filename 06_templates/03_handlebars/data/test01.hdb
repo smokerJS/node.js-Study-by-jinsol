@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <h2>handlebars 기본문법</h2>
+        <h1>{{body}}</h1>
+    </body>
+</html>

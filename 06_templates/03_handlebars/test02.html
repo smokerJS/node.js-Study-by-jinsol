@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script id="entry-template" type="text/x-handlebars-template">
+        <h2>{{title}}</h2>
+        <div>
+          {{body}}
+        </div>
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // id가 entry-template인 script 태그의 내용을 핸들바를 통해서 처리하기
+        var source = document.querySelector("#entry-template").innerHTML;
+        // 핸들바에 적용할 데이터를 연결
+        var template = Handlebars.compile(source);
+        // 적용할 사용자 정의 데이터를 넘겨준다.
+        var html = template ({
+            title: "handlebars 사용하기",
+            body: "핸들바를 활용한 예제입니다."
+        });
+        // 변환된 결과를 화면의 특정 부분에 처리하기
+        document.querySelector("#result").innerHTML = html;
+    </script>
+</body>
+</html>

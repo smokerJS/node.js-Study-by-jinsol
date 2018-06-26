@@ -1,0 +1,5 @@
+예제는 data/test.pug 참조
+
+test01 - pug의 기본 문법1
+test02 - pug의 기본 문법2
+test03 - pug에 동적 값 전달, 스크립트 코드 작성

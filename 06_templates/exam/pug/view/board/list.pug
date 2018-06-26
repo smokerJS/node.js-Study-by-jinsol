@@ -1,0 +1,25 @@
+doctype html
+html
+head
+meta(charset="UTF-8")
+title PUG 게시판
+body
+  h1 PUG 게시판
+  table(style="border: 1px solid black")
+    thead
+      tr
+        td 번호
+        td 제목
+        td 작성자
+    tbody
+      - rows.forEach(board => {
+      tr
+        td #{board.no}
+        td 
+          a(a href=`detail.do?no=${board.no}`) #{board.title}
+        td #{board.writer}
+      -})
+  a(href=`writeForm.do`) 글쓰기
+        
+    
+      

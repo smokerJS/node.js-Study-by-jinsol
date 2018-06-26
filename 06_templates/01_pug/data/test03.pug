@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel="stylesheet",href="test.css")
+  body
+    h1 Hello pug!
+    a(href=url) 속성에는 #접근이 안된다. "" 빠지면 자동인식한다.
+    div(id="aDiv")
+      p 아이디 설정으로 자동 만들어진 div
+    div(class="bDiv")
+      p 클래스 설정으로 자동 만들어진 div
+    #cDiv
+      p div는 많이 사용해서 #으로 div를 만들 수 있다.
+    .eDiv 
+      p 클래스 속성도 마찬가지이다
+    - for (let i = 0; i < arr.length; i++){
+      h3 #{i} 스크립트 코드인걸 명시할 떄 - 를 붙인다
+    - }

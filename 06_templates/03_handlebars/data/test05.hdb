@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div id="result">
+            <h2>{{title}}</h2>
+            <div>
+                <h2>핸들바를 이용한 반복</h2>
+                {{#list members}} 이름 : {{name}} - 나이 : {{age}} {{/list}}
+            </div>
+        </div>
+    </body>
+</html>

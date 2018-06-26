@@ -1,0 +1,4 @@
+예제는 data/test.ejs 참조
+
+test01 - ejs 기본 문법
+test02 - 동적 프로퍼티 전달
