@@ -1,0 +1,9 @@
+01_step - exports 를 이용하여 모듈 구현하기
+02_step - get,post 메서드 형식 구현하기
+03_step - listen 메서드로 서버 열기
+04_step - 요청 URL과 매칭하여 get, post 메서드 기능 구현하기
+05_step - send, redirect 메서드와 파라미터 인풋 구현하기
+
+exam - 05_step 까지 진행 후 접근하기
+
+07_make_express 는 express 프레임워크의 구조를 직접 만들어 실행해봅니다.
