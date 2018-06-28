@@ -3,7 +3,7 @@
 **Node.js-Study-by-jinsol**
 ===============
 정진솔(https://github.com/smokerJS)<br>
-Inquire - jjshoro@gamil.com<br>
+Inquire - jjshoro@gmail.com<br>
 
 ---------------------------------------
 
