@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://localhost:10001/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<div id="loginDiv">
+		<input type="text" id="loginId" />
+		<button id="loginBtn">로그인</button>
+	</div>
+	<div id="contentDiv" style="display: none;">
+		<input type="text" id="msg" />
+		<button id="msgBtn">메세지 전송</button>
+	</div>
+	<script>
+		var socket;
+		var loginId;
+		$("#loginBtn").click(function () {
+			// 소켓서버에 접속
+		    socket = io.connect();
+		    loginId = $("#loginId").val();
+		    socket.emit("login", loginId);
+		    
+		    socket.on("msg", function (data) {
+		        alert("서버에서 전송된 데이터 : " + data);
+		    });
+		    
+		    $("#loginDiv").hide();
+		    $("#contentDiv").show();
+		});
+	  
+	  
+	    $("#msgBtn").click(function () {
+	        var recvId = prompt("받는사람아이디", "받을 사람 아이디를 입력하세요");
+		    // id가 msg 인 텍스트 창에 입력된 데이터를 소켓서버에 전송
+		    socket.emit("msg", {recvId: recvId, sendId: loginId, msg: $("#msg").val()});
+	    });
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

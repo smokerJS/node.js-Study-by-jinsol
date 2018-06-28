@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		width: 80%;
+		height: 600px;
+		border: 5px solid tomato;
+		
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://localhost:10001/socket.io/socket.io.js"></script>
+<script>
+	$(document).ready(function () {
+	  // 소켓서버에 접속
+	  var socket = io.connect();
+	  
+	  socket.on("msg", function (data) {
+	    $("div").prepend(data + "<br>");
+	  });
+	  
+	  $("[type=button]").click(function () {
+	    // id가 msg 인 텍스트 창에 입력된 데이터를 소켓서버에 전송
+	    console.log("서버로 전송함");
+	    socket.emit("msg", $("#msg").val());
+	  });
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="msg" />
+	<input type="button" value="메세지 전송" />
+	<div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
